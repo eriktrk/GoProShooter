@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <LinearLayout
+        android:id="@id/mainLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/textView1" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true" android:layout_marginTop="10dp"
+            android:text="Request Editor"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:id="@+id/nameLabel" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <EditText android:id="@+id/nameText" android:layout_width="0sp"
+                android:layout_height="wrap_content"  android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:id="@+id/ipsLabel" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IP address"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <EditText android:id="@+id/ipsText" android:layout_width="0sp"
+                android:layout_height="wrap_content"  android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:id="@+id/pathLabel" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address path"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <EditText android:id="@+id/pathText" android:layout_width="0sp"
+                android:layout_height="wrap_content"  android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:id="@+id/varsLabel" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Variables"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <EditText android:id="@+id/varsText" android:layout_width="0sp"
+                android:layout_height="wrap_content"  android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:id="@+id/valsLabel" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Values"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <EditText android:id="@+id/valsText" android:layout_width="0sp"
+                android:layout_height="wrap_content"  android:layout_weight="1" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scan"
+                android:id="@+id/btnScan" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:id="@+id/ssidLabel" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WiFi SSID"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <EditText android:id="@+id/ssidText" android:layout_width="0sp"
+                android:layout_height="wrap_content"  android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView android:id="@+id/passLabel" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wifi password"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <EditText android:id="@+id/passText" android:layout_width="0sp"
+                android:layout_height="wrap_content"  android:layout_weight="1"
+                android:inputType="textPassword"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/barcodeCheck"
+                android:text="Scan barcode for value each time"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnsLayout"
+        android:layout_alignParentBottom="true">
+        <Button android:id="@+id/save" style="?android:attr/buttonStyleSmall"
+            android:layout_width="0sp" android:layout_height="wrap_content"
+            android:layout_weight="4" android:text="Save" />
+
+        <Button android:id="@+id/close" style="?android:attr/buttonStyleSmall"
+            android:layout_width="0sp" android:layout_height="wrap_content"
+            android:layout_weight="2" android:text="Cancel" />
+        <Button android:id="@+id/deleteBtn" style="?android:attr/buttonStyleSmall"
+            android:layout_width="0sp" android:layout_height="wrap_content"
+            android:layout_weight="2" android:text="Delete" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnsLayout">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/previewText"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:text=""/>
+    </LinearLayout>
+
+</RelativeLayout>
